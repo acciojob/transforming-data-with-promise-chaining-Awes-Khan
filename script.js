@@ -14,7 +14,7 @@ async function transformData(){
 			output.innerHTML= "Result: " + ipValue;
 			resolve(ipValue);
 		},2000);
-	})
+	});
 	new Promise((resolve)=>{ //step 3
 		setTImeout(()=>{
 			output.innerHTML= "Result: " + ipValue;
@@ -71,8 +71,8 @@ async function transformData(){
 			},1000);
 		})
 	})
-	.catch(error){
+	.catch((error)=>{
 		alert(error);
-	}
+	});
 
 }
