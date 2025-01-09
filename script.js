@@ -43,7 +43,7 @@ async function transformData(){
 		return new Promise((resolve,reject)=>{
 			setTimeout(()=>{
 				if(number/2){
-					const newNumber = number-3;
+					const newNumber = number/2;
 					output.innerHTML= "Result: " + newNumber;
 					resolve(newNumber);
 					
