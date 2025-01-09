@@ -10,20 +10,20 @@ btn.addEventListener("click",()=>{
 async function transformData(){	
 	const ipValue = parseInt(ip.value, 10); 
 	new Promise((resolve)=>{ //step 2
-		setTImeout(()=>{
+		setTimeout(()=>{
 			output.innerHTML= "Result: " + ipValue;
 			resolve(ipValue);
 		},2000);
 	});
 	new Promise((resolve)=>{ //step 3
-		setTImeout(()=>{
+		setTimeout(()=>{
 			output.innerHTML= "Result: " + ipValue;
 			resolve(ipValue);
 		},2000);
 	})
 	.then((number)=>{ //step 4
 		return new Promise((resolve)=>{
-			setTImeout(()=>{
+			setTimeout(()=>{
 				const newNumber = number*2;
 				output.innerHTML= "Result: " + newNumber;
 				resolve(newNumber);
@@ -32,7 +32,7 @@ async function transformData(){
 	})
 	.then((number)=>{ //stepp 5
 		return new Promise((resolve)=>{
-			setTImeout(()=>{
+			setTimeout(()=>{
 				const newNumber = number-3;
 				output.innerHTML= "Result: " + newNumber;
 				resolve(newNumber);
@@ -41,7 +41,7 @@ async function transformData(){
 	})
 	.then((number)=>{ //stepp 6
 		return new Promise((resolve,reject)=>{
-			setTImeout(()=>{
+			setTimeout(()=>{
 				if(number/2){
 					const newNumber = number-3;
 					output.innerHTML= "Result: " + newNumber;
@@ -55,7 +55,7 @@ async function transformData(){
 	})
 	.then((number)=>{ //step 7
 		return new Promise((resolve)=>{
-			setTImeout(()=>{
+			setTimeout(()=>{
 				const newNumber = number+10;
 				output.innerHTML= "Result: " + newNumber;
 				resolve(newNumber);
@@ -64,7 +64,7 @@ async function transformData(){
 	})
 	.then((number)=>{ //step 8
 		return new Promise((resolve)=>{
-			setTImeout(()=>{
+			setTimeout(()=>{
 				const newNumber = number;
 				output.innerHTML= "Final Result: " + newNumber;
 				resolve();
